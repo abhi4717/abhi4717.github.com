@@ -1,0 +1,50 @@
+*{
+margin: 0px;
+padding: 0px;
+font-family:"arial",sans-serif;
+}
+
+body{
+background-image: url('../Images/test.png');
+background-repeat: repeat;
+height: 100%;
+}
+
+#content{
+width: 70%;
+height: 100%;
+margin: 20px auto;
+padding: 10px;
+background-color: #FFFFFF;
+border: 1px black solid;
+}
+
+#leftContent{
+width: 70%;
+float: left;
+}
+
+#rightContent{
+width: 25%;
+float: right;
+}
+
+#myImage{
+max-width: 220px;
+max-height: 132px;
+border: 1px black solid;
+background-image: url('../Images/Me.jpeg');
+width: 100%;
+zoom: 90%;
+height: 132px;
+}
+
+#skills li{
+display: block;
+text-decoration: underline;
+font-size: 12px;
+}
+.emptyDiv{
+clear: both;
+}
+
