@@ -117,8 +117,15 @@ border-radius: 5px;
 text-align: center;
 }
 
-.subMendsgfasgsagu{
+.subMenu{
 position: relative;
+width: 400%;
+}
+
+.subMenuLi{
+clear: both;
+color: white;
+background-color: darkBlue;
 }
 
 .emptyDiv{
