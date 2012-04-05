@@ -6,7 +6,7 @@ $("document").ready(function(){
 		,dataType : "json"
 		,success : appendMenu
 		,error : function(xhr,error,result){
-			alert(result);
+			/*alert(result);*/
 		}
 	});
 	
@@ -25,7 +25,10 @@ $("document").ready(function(){
 		var navURL = 'Blogging/'+blogId+'.html';
 		navigatePost(navURL);
 	}
-	
+	else{
+		navigatePost('Blogging/home.html');
+	}
+
 });
 
 function appendMenu(data){
