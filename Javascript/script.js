@@ -25,7 +25,6 @@ $("document").ready(function(){
 		var navURL = 'Blogging/'+blogId+'.html';
 		navigatePost(navURL);
 	}
-	
 });
 
 function appendMenu(data){

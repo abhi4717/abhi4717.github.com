@@ -21,7 +21,6 @@ $("document").ready(function(){
 	var queryString = url.split("?");
 	if(queryString[1] != undefined){
 		var blogValue = queryString[1].split("=");
-		alert(queryString[1].split("=")[1]);
 		var blogId = blogValue[1];
 		var navURL = 'Blogging/'+blogId+'.html';
 		navigatePost(navURL);
