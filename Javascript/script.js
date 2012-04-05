@@ -17,7 +17,16 @@ $("document").ready(function(){
 			$("#blogSubMenu").slideUp(200);
 		});
 		
-	$(".subMenuLi a").live("click",navigatePost);
+	var url = location.href;
+	var queryString = url.split("?");
+	if(queryString[1] != undefined){
+		var blogValue = queryString[1].split("=");
+		alert(queryString[1].split("=")[1]);
+		var blogId = blogValue[1];
+		var navURL = 'Blogging/'+blogId+'.html';
+		navigatePost(navURL);
+	}
+	
 });
 
 function appendMenu(data){
@@ -28,13 +37,12 @@ function appendMenu(data){
 	$(".subMenuLi a").addClass("subMenuA");
 }
 
-function navigatePost(url){
-	var inputElement = $(this).parent().children()[1];
+function navigatePost(postURL){
+	/*var inputElement = $(this).parent().children()[1];
 	var value = $(inputElement).attr('value');
-	var dynamicURL = "Blogging/"+value;
-	
+	var dynamicURL = "Blogging/"+value;*/
 	$.ajax({
-		url : dynamicURL
+		url : postURL
 		,dataType : "html"
 		,success : function(data){
 			$("#maincontent").empty();
@@ -50,7 +58,7 @@ function navigatePost(url){
 function getMenu(data){
 	var menu = '<ul id="blogSubMenu">';
 	for(var i =0; i<data.length;i++){
-		menu += '<li><a href="?blogId='+(i+1)+'">'+data[i].topic+'</a>';
+		menu += '<li><a href="?blogId='+data[i].filename.split('.')[0]+'">'+data[i].topic+'</a>';
 		menu += '<input type="hidden" value = "'+data[i].filename+'" />';
 	}
 	menu+='</li></ul></div>';
