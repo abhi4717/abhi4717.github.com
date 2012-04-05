@@ -1,0 +1,916 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+ {font-family:Wingdings;
+ panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+ {font-family:Tahoma;
+ panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+ {font-family:Palatino;
+ panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+ {font-family:"Liberation Serif";
+ panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+ {font-family:"\@Liberation Serif";
+ panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+h1
+ {margin-top:0in;
+ margin-right:.75in;
+ margin-bottom:15.0pt;
+ margin-left:28.1pt;
+ text-indent:-28.1pt;
+ page-break-before:always;
+ font-size:22.0pt;
+ font-family:Arial;
+ font-weight:normal;}
+h2
+ {margin-top:.25in;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:12.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+h3
+ {margin-top:12.0pt;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+ {margin-top:0in;
+ margin-right:1.0in;
+ margin-bottom:9.0pt;
+ margin-left:41.05pt;
+ text-indent:-.25in;
+ font-size:13.0pt;
+ font-family:Arial;
+ color:#002960;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+ {margin-top:0in;
+ margin-right:1.0in;
+ margin-bottom:9.0pt;
+ margin-left:41.05pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+ {margin-top:0in;
+ margin-right:1.0in;
+ margin-bottom:9.0pt;
+ margin-left:59.05pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:.5in;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:48.0pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:60.0pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:3.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:84.0pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:96.0pt;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:.2in;
+ margin-bottom:.0001pt;
+ text-indent:-.2in;
+ font-size:9.0pt;
+ font-family:"Times New Roman";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:10.0pt;
+ font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";
+ font-style:italic;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ text-align:right;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+ {margin-top:6.0pt;
+ margin-right:0in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";
+ font-weight:bold;}
+p.MsoEnvelopeAddress, li.MsoEnvelopeAddress, div.MsoEnvelopeAddress
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:2.0in;
+ margin-bottom:.0001pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.MsoEnvelopeReturn, li.MsoEnvelopeReturn, div.MsoEnvelopeReturn
+ {margin:0in;
+ margin-bottom:.0001pt;
+ font-size:10.0pt;
+ font-family:"Times New Roman";}
+span.MsoFootnoteReference
+ {position:relative;
+ top:-3.0pt;}
+span.MsoPageNumber
+ {font-family:Arial;}
+span.MsoEndnoteReference
+ {vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:10.0pt;
+ font-family:"Times New Roman";}
+p.MsoMacroText, li.MsoMacroText, div.MsoMacroText
+ {margin-top:0in;
+ margin-right:-2.9in;
+ margin-bottom:0in;
+ margin-left:0in;
+ margin-bottom:.0001pt;
+ font-size:10.0pt;
+ font-family:Arial;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:56.7pt;
+ text-indent:-56.7pt;
+ background:#CCCCCC;
+ border:none;
+ padding:0in;
+ font-size:12.0pt;
+ font-family:Arial;}
+a:link, span.MsoHyperlink
+ {color:blue;
+ text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+ {color:purple;
+ text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:8.0pt;
+ font-family:Tahoma;}
+p.31subtitle, li.31subtitle, div.31subtitle
+ {margin-top:0in;
+ margin-right:2.5in;
+ margin-bottom:.25in;
+ margin-left:0in;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.40address, li.40address, div.40address
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.39restrictivenote, li.39restrictivenote, div.39restrictivenote
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:10.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.86exhmeasure, li.86exhmeasure, div.86exhmeasure
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:0in;
+ margin-bottom:.0001pt;
+ font-size:9.0pt;
+ font-family:Arial;
+ color:#999999;
+ text-transform:uppercase;}
+p.32chaptertitle, li.32chaptertitle, div.32chaptertitle
+ {margin-top:0in;
+ margin-right:.75in;
+ margin-bottom:15.0pt;
+ margin-left:28.1pt;
+ text-indent:-28.1pt;
+ page-break-before:always;
+ font-size:22.0pt;
+ font-family:Arial;}
+p.20major, li.20major, div.20major
+ {margin-top:.25in;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:12.0pt;
+ font-family:Arial;
+ text-transform:uppercase;
+ font-weight:bold;}
+p.21minor, li.21minor, div.21minor
+ {margin-top:12.0pt;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:13.0pt;
+ font-family:Arial;
+ font-weight:bold;}
+p.60exhnormal, li.60exhnormal, div.60exhnormal
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:0in;
+ margin-bottom:.0001pt;
+ font-size:11.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.01squarebullet, li.01squarebullet, div.01squarebullet
+ {margin-top:0in;
+ margin-right:.1in;
+ margin-bottom:6.0pt;
+ margin-left:.25in;
+ text-indent:-.25in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.02dash, li.02dash, div.02dash
+ {margin-top:0in;
+ margin-right:.1in;
+ margin-bottom:6.0pt;
+ margin-left:32.2pt;
+ text-indent:-14.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.03opensquarebullet, li.03opensquarebullet, div.03opensquarebullet
+ {margin-top:0in;
+ margin-right:.1in;
+ margin-bottom:6.0pt;
+ margin-left:.65in;
+ text-indent:-.2in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.04shortdash, li.04shortdash, div.04shortdash
+ {margin-top:0in;
+ margin-right:.1in;
+ margin-bottom:6.0pt;
+ margin-left:60.55pt;
+ text-indent:-14.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.05number1, li.05number1, div.05number1
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:6.0pt;
+ margin-left:.25in;
+ text-indent:-.25in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.06letter2, li.06letter2, div.06letter2
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:6.0pt;
+ margin-left:32.3pt;
+ text-indent:-14.45pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.07number3, li.07number3, div.07number3
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:6.0pt;
+ margin-left:46.2pt;
+ text-indent:-13.9pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.08letter4, li.08letter4, div.08letter4
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:6.0pt;
+ margin-left:60.65pt;
+ text-indent:-14.45pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.10tablenormal, li.10tablenormal, div.10tablenormal
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.11tablesquarebullet, li.11tablesquarebullet, div.11tablesquarebullet
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:.2in;
+ text-indent:-.2in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.12tabledash, li.12tabledash, div.12tabledash
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:31.95pt;
+ text-indent:-14.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.13tableopensquarebullet, li.13tableopensquarebullet, div.13tableopensquarebullet
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:46.1pt;
+ text-indent:-14.15pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.14tableshortdash, li.14tableshortdash, div.14tableshortdash
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:60.3pt;
+ text-indent:-14.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.15tableheading, li.15tableheading, div.15tableheading
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";
+ font-weight:bold;}
+p.16tablenumber1, li.16tablenumber1, div.16tablenumber1
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:.25in;
+ text-indent:-.25in;
+ line-height:115%;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.17tableletter2, li.17tableletter2, div.17tableletter2
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:32.3pt;
+ text-indent:-14.45pt;
+ line-height:115%;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.18tablenumber3, li.18tablenumber3, div.18tablenumber3
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:46.2pt;
+ text-indent:-13.9pt;
+ line-height:115%;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.19tableletter4, li.19tableletter4, div.19tableletter4
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:60.65pt;
+ text-indent:-14.45pt;
+ line-height:115%;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.22numberedparagraph, li.22numberedparagraph, div.22numberedparagraph
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:12.0pt;
+ font-family:Arial;
+ font-weight:bold;}
+p.23threesquarebulletsbreak, li.23threesquarebulletsbreak, div.23threesquarebulletsbreak
+ {margin-top:24.0pt;
+ margin-right:0in;
+ margin-bottom:24.0pt;
+ margin-left:0in;
+ text-align:center;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.24enddate, li.24enddate, div.24enddate
+ {margin-top:6.0pt;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ border:none;
+ padding:0in;
+ font-size:10.0pt;
+ font-family:Arial;}
+p.30documenttitle, li.30documenttitle, div.30documenttitle
+ {margin-top:30.0pt;
+ margin-right:.75in;
+ margin-bottom:.25in;
+ margin-left:0in;
+ font-size:22.0pt;
+ font-family:Arial;}
+p.33contentschapter, li.33contentschapter, div.33contentschapter
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:50.0pt;
+ margin-left:0in;
+ font-size:22.0pt;
+ font-family:Arial;}
+p.36opener, li.36opener, div.36opener
+ {margin:0in;
+ margin-bottom:.0001pt;
+ text-indent:-1.5in;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.TitlePageDisclaimer, li.TitlePageDisclaimer, div.TitlePageDisclaimer
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:9.0pt;
+ font-family:Arial;}
+p.41closing, li.41closing, div.41closing
+ {margin-top:3.0pt;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:197.9pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.42cc, li.42cc, div.42cc
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:27.2pt;
+ text-indent:-27.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.70exhtblnormal, li.70exhtblnormal, div.70exhtblnormal
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:.1in;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.71exhtblbullet, li.71exhtblbullet, div.71exhtblbullet
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:.25in;
+ text-indent:-.25in;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.72exhtbldash, li.72exhtbldash, div.72exhtbldash
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:32.2pt;
+ text-indent:-14.2pt;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.73exhtbldot, li.73exhtbldot, div.73exhtbldot
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:46.35pt;
+ text-indent:-14.15pt;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.74exhtblddot, li.74exhtblddot, div.74exhtblddot
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:60.55pt;
+ text-indent:-14.2pt;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.75exhtblheading, li.75exhtblheading, div.75exhtblheading
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:0in;
+ font-size:12.0pt;
+ font-family:Arial;
+ font-weight:bold;}
+p.76exhtblnumber1, li.76exhtblnumber1, div.76exhtblnumber1
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:.25in;
+ text-indent:-.25in;
+ line-height:115%;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.77exhtblletter2, li.77exhtblletter2, div.77exhtblletter2
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:32.3pt;
+ text-indent:-14.45pt;
+ line-height:115%;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.78exhtblnumber3, li.78exhtblnumber3, div.78exhtblnumber3
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:46.2pt;
+ text-indent:-13.9pt;
+ line-height:115%;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.79exhtblletter4, li.79exhtblletter4, div.79exhtblletter4
+ {margin-top:3.0pt;
+ margin-right:14.45pt;
+ margin-bottom:3.0pt;
+ margin-left:60.65pt;
+ text-indent:-14.45pt;
+ line-height:115%;
+ font-size:12.0pt;
+ font-family:Arial;}
+p.82exhnumber, li.82exhnumber, div.82exhnumber
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:0in;
+ margin-bottom:.0001pt;
+ page-break-after:avoid;
+ font-size:11.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.83exhtitle, li.83exhtitle, div.83exhtitle
+ {margin-top:5.0pt;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:0in;
+ margin-bottom:.0001pt;
+ font-size:11.0pt;
+ font-family:Arial;
+ text-transform:uppercase;
+ font-weight:bold;}
+p.85exhsticker, li.85exhsticker, div.85exhsticker
+ {margin-top:5.0pt;
+ margin-right:0in;
+ margin-bottom:0in;
+ margin-left:5.65pt;
+ margin-bottom:.0001pt;
+ border:none;
+ padding:0in;
+ font-size:9.0pt;
+ font-family:Arial;}
+p.88exhsource, li.88exhsource, div.88exhsource
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:2.0pt;
+ margin-left:41.75pt;
+ text-indent:-41.75pt;
+ font-size:9.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.89exhnote, li.89exhnote, div.89exhnote
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:2.0pt;
+ margin-left:.35in;
+ text-indent:-.35in;
+ font-size:9.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.90exhnote, li.90exhnote, div.90exhnote
+ {margin-top:10.0pt;
+ margin-right:0in;
+ margin-bottom:2.0pt;
+ margin-left:9.35pt;
+ text-indent:-9.35pt;
+ font-size:9.0pt;
+ font-family:Arial;
+ text-transform:uppercase;}
+p.SOPP42cc, li.SOPP42cc, div.SOPP42cc
+ {margin-top:24.0pt;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:27.2pt;
+ text-indent:-27.2pt;
+ font-size:13.0pt;
+ font-family:"Times New Roman";}
+p.DocumentID-BL, li.DocumentID-BL, div.DocumentID-BL
+ {margin:0in;
+ margin-bottom:.0001pt;
+ font-size:8.0pt;
+ font-family:"Times New Roman";}
+p.DocumentID-BLT, li.DocumentID-BLT, div.DocumentID-BLT
+ {margin:0in;
+ margin-bottom:.0001pt;
+ font-size:8.0pt;
+ font-family:"Times New Roman";
+ color:red;
+ display:none;}
+p.DocumentID-TR, li.DocumentID-TR, div.DocumentID-TR
+ {margin:0in;
+ margin-bottom:.0001pt;
+ text-align:right;
+ font-size:8.0pt;
+ font-family:"Times New Roman";}
+p.DocumentID-TRT, li.DocumentID-TRT, div.DocumentID-TRT
+ {margin:0in;
+ margin-bottom:.0001pt;
+ text-align:right;
+ font-size:8.0pt;
+ font-family:"Times New Roman";
+ color:red;
+ display:none;}
+span.StyleArialLatin13pt
+ {font-family:Arial;
+ color:windowtext;}
+span.StyleArial14pt
+ {font-family:Arial;
+ color:windowtext;}
+p.StyleArial22ptCustomAfter10pt, li.StyleArial22ptCustomAfter10pt, div.StyleArial22ptCustomAfter10pt
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:10.0pt;
+ margin-left:0in;
+ font-size:22.0pt;
+ font-family:Arial;}
+p.TitlePageTitle, li.TitlePageTitle, div.TitlePageTitle
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:10.0pt;
+ margin-left:0in;
+ font-size:22.0pt;
+ font-family:Arial;}
+p.TitlePageClient, li.TitlePageClient, div.TitlePageClient
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:14.0pt;
+ font-family:Arial;}
+p.TitlePageDocument, li.TitlePageDocument, div.TitlePageDocument
+ {margin-top:0in;
+ margin-right:0in;
+ margin-bottom:9.0pt;
+ margin-left:0in;
+ font-size:13.0pt;
+ font-family:Arial;}
+p.SOPP20major, li.SOPP20major, div.SOPP20major
+ {margin-top:.25in;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:12.0pt;
+ font-family:Arial;
+ text-transform:uppercase;
+ font-weight:bold;}
+p.SOPP21minor, li.SOPP21minor, div.SOPP21minor
+ {margin-top:12.0pt;
+ margin-right:.25in;
+ margin-bottom:6.0pt;
+ margin-left:0in;
+ page-break-after:avoid;
+ font-size:13.0pt;
+ font-family:Arial;
+ font-weight:bold;}
+p.SOPP30documenttitle, li.SOPP30documenttitle, div.SOPP30documenttitle
+ {margin-top:30.0pt;
+ margin-right:.75in;
+ margin-bottom:.25in;
+ margin-left:0in;
+ font-size:22.0pt;
+ font-family:Arial;}
+ /* Page Definitions */
+ @page Section1
+ {size:8.5in 11.0in;
+ margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+ {page:Section1;}
+ /* List Definitions */
+ ol
+ {margin-bottom:0in;}
+ul
+ {margin-bottom:0in;}
+-->
+</style>
+
+
+<br />
+<div class="Section1">
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<b><span style="font-family: Arial; font-size: 12pt;">Why I started liking
+GIT.....</span></b></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<br /></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">I have been using Visual
+Studio IDE along with VSS and TFS as version control softwares for nearly two
+years before moving on to Git. To be frank, I was amazed how easily
+things could be controlled from a command line in Git. One of the cool features
+of Git is, it allows more than one person to edit the same file simultaneously.</span></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<br /></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<b><span style="font-family: Arial; font-size: 12pt;">GIT Philosophy:</span></b></div>
+<div align="center" class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-align: center; text-autospace: none;">
+<i><span style="font-family: Arial; font-size: 12pt;">“Commit more, Commit often”</span></i></div>
+<div align="center" class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-align: center; text-autospace: none;">
+<br /></div>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-WSitYwmY7S0/T0Yjr5q16dI/AAAAAAAAACI/pFMpBqbFv6I/s1600/image001.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-WSitYwmY7S0/T0Yjr5q16dI/AAAAAAAAACI/pFMpBqbFv6I/s1600/image001.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Git workflow</td></tr>
+</tbody></table>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+&nbsp;<b><span style="font-family: Arial; font-size: 12pt;">Git involves just 3
+steps</span></b></div>
+<ol start="1" style="margin-top: 0in;" type="1">
+<li class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;"><span style="font-family: Arial; font-size: 12pt;">Get the latest copy
+     of the repository on the local machine</span></li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;"><span style="font-family: Arial; font-size: 12pt;">Make changes on the
+     local copy and stage them</span></li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;"><span style="font-family: Arial; font-size: 12pt;">Then commit the
+     staged changes onto the server</span></li>
+</ol>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<br /></div>
+<ul style="text-align: left;">
+<li><span style="font-family: Symbol; font-size: 12pt;"><span style="font: 7pt &quot;Times New Roman&quot;;"></span></span><b><u><span style="font-family: Arial; font-size: 12pt;">Distributed
+Version Control</span></u></b></li>
+</ul>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">Git is distributed version control
+software. Being distributed means that all the participants will have an
+individual copy of the repository instead of repository residing on a central
+server. </span></div>
+<ul style="text-align: left;">
+<li><span style="font-family: Arial; font-size: 12pt;">&nbsp;</span><b><u><span style="font-family: Arial; font-size: 12pt;">Simultaneous
+editing</span></u></b></li>
+</ul>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">More than one person can work on the
+same file. </span></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<br /></div>
+<ul style="text-align: left;">
+<li><span style="font-family: Symbol; font-size: 12pt;"><span style="font: 7pt &quot;Times New Roman&quot;;"></span></span><b><u><span style="font-family: Arial; font-size: 12pt;">Local
+Conflict resolution</span></u></b></li>
+</ul>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">Simultaneous edit could cause
+conflict. All conflict resolution takes place locally. Hence concerned persons
+are informed incase of conflicts. They need to resolve them locally before
+pushing them onto the master repository. </span></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; text-autospace: none;">
+<br /></div>
+<ul style="text-align: left;">
+<li><b><u><span style="font-family: Arial; font-size: 12pt;">No Central
+Server</span></u></b></li>
+</ul>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">In git, server connection are
+required when one has to get new/update local copy and pushing changes to the
+master. This means one can work on projects even if there is no connection to
+the server.</span></div>
+<ul style="text-align: left;">
+<li><span style="font-family: Arial; font-size: 12pt;">&nbsp;</span><span style="font-family: Symbol; font-size: 12pt;"><span style="font: 7pt &quot;Times New Roman&quot;;"></span></span><b><u><span style="font-family: Arial; font-size: 12pt;">Cost</span></u></b></li>
+</ul>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<span style="font-family: Arial; font-size: 12pt;">In comparision with VSS and TFS, git
+is cheap.</span></div>
+<div class="MsoNormal" style="margin-bottom: .0001pt; margin-bottom: 0in; margin-left: .25in; margin-right: 0in; margin-top: 0in; text-autospace: none;">
+<br /></div>
+<div class="MsoNormal">
+<b><span style="font-size: 16pt;">How to integrate Git with
+Visual Studio:</span></b></div>
+<div class="MsoNormal">
+In the steps below I am going to integrate git plug in into
+Visual Studio 2010 Enterprise Edition.</div>
+<div class="MsoNormal">
+<b>Step 1</b>: &nbsp;Click on Tools menu and select Extension
+Manager.</div>
+<div align="center" class="MsoNormal" style="text-align: center;">
+</div>
+<div class="MsoNormal">
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-Oq_Gm8pciQc/T0YjuBygJvI/AAAAAAAAACQ/75JdJt4Di-g/s1600/image002.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-Oq_Gm8pciQc/T0YjuBygJvI/AAAAAAAAACQ/75JdJt4Di-g/s1600/image002.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Tools Menu</td></tr>
+</tbody></table>
+<br /></div>
+<span style="font-family: &quot;Times New Roman&quot;; font-size: 13pt;"><br clear="all" style="page-break-before: always;" />
+</span>
+
+<br />
+<div class="MsoNormal">
+<b>Step 2</b>: In the extension manager select “<b><i>Git
+Source Control Provider</i></b>”. If not found you can go to <b>Online Gallery</b>
+tab search for git. You will find the listing as shown below. Click on the
+Download button against Git Source Control Provider.</div>
+<div align="center" class="MsoNormal" style="text-align: center;">
+</div>
+<div class="MsoNormal">
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-L6X9X-I8xz4/T0Yju1OQ28I/AAAAAAAAACY/Sn21yvXMfqk/s1600/image003.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-L6X9X-I8xz4/T0Yju1OQ28I/AAAAAAAAACY/Sn21yvXMfqk/s1600/image003.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Finding Git plugin</td></tr>
+</tbody></table>
+<br /></div>
+<div class="MsoNormal">
+<b>Step 3</b>: It will start downloading the plugin. Upon download an
+installation dialog box popup. Select install. It will start the installation
+process.<br />
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-IHsF2It85Ms/T0YjwFpEyKI/AAAAAAAAACg/FH8I1OmVC00/s1600/image004.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-IHsF2It85Ms/T0YjwFpEyKI/AAAAAAAAACg/FH8I1OmVC00/s1600/image004.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Install Dialog Box</td></tr>
+</tbody></table>
+&nbsp;<b>Step 4</b>: Upon successful installation of the plug in,
+Extension Manager will ask to restart the IDE. Click on “<b><i>Restart Now</i></b>”
+button.&nbsp; Wait patiently until the IDE restarts.<br />
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-pB77TrYDrPw/T0YjwqqdHoI/AAAAAAAAACo/eOv2KPygW6c/s1600/image005.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-pB77TrYDrPw/T0YjwqqdHoI/AAAAAAAAACo/eOv2KPygW6c/s1600/image005.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Restart IDE message</td></tr>
+</tbody></table>
+</div>
+<div align="center" class="MsoNormal" style="text-align: center;">
+</div>
+<div class="MsoNormal">
+<b>Step 5</b>: After the IDE has restarted, create any
+project and right click on Solution Explorer there you will see section for
+Git.<br />
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-vI-dr3A3rEE/T0YjxUenZzI/AAAAAAAAACw/pRVn9jXUJyI/s1600/image006.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-vI-dr3A3rEE/T0YjxUenZzI/AAAAAAAAACw/pRVn9jXUJyI/s1600/image006.jpg" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Git in action</td></tr>
+</tbody></table>
+</div>
+<div align="center" class="MsoNormal" style="text-align: center;">
+</div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+For Detailed documentation about using Git with Visual
+Studio IDE, you can refer <a href="http://gitscc.codeplex.com/documentation">http://gitscc.codeplex.com/documentation</a></div>
+<div class="MsoNormal">
+Additionally there are some descriptive video can be found on
+<b>You Tube</b>. One of them <a href="http://www.youtube.com/watch?v=efS0kKvfi6k">http://www.youtube.com/watch?v=efS0kKvfi6k</a>
+describes how to install and use git hub.</div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+<br /></div>
+<div class="MsoNormal">
+Image Reference:</div>
+<div class="MsoNormal">
+http://progit.org/</div>
+</div>
+</div>

@@ -10,8 +10,11 @@ background-repeat: repeat;
 height: 100%;
 }
 
-header h1{
-font-family: 'Monotype Corsiva';
+header span{
+font-weight: normal;
+font-size: 22pt;
+height: auto;
+margin: auto;
 }
 
 #content{
@@ -42,8 +45,10 @@ height: 132px;
 }
 
 #maincontent{
-padding: 5px;
-margin-top: 10px;
+padding: 30px;
+margin: 10px;
+border-radius: 5px;
+border: 1px solid black;
 }
 
 #skills li{
@@ -84,9 +89,9 @@ color: #FFF;
 background-color: #000066;
 color:white;
 padding: 10px;
-height: 100px;
+/*height: auto;*/
 font-style: italic;
-font-size: 32px;
+/*font-size: 32px;*/
 }
 
 #pageLinks{

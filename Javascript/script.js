@@ -21,26 +21,34 @@ $("document").ready(function(){
 		,function(){
 			$("#blogSubMenu").slideUp(200);
 		});
-	
-	
+		
+	$(".subMenuLi a").live("click",navigatePost);
 });
 
-/*function navigatePost(){
-	$("#maincontent").empty();
+function navigatePost(url){
+	var inputElement = $(this).parent().children()[1];
+	var value = $(inputElement).attr('value');
+	var dynamicURL = "Blogging/"+value;
+	
 	$.ajax({
-		url : 
+		url : dynamicURL
 		,dataType : "html"
 		,success : function(data){
+			$("#maincontent").empty();
+			$("#maincontent").append(data);
+			}	
+		,error : function(xhr, error, text){
+			alert(text);
 		}
 	})
-}*/
-
+}
 
 function getMenu(data){
 	var menu = '<ul id="blogSubMenu">';
 	for(var i =0; i<data.length;i++){
-		menu += '<li>'+data[i].topic+'</li>';
+		menu += '<li><a href="#">'+data[i].topic+'</a>';
+		menu += '<input type="hidden" value = "'+data[i].filename+'" />';
 	}
-	menu+='</ul></div>';
+	menu+='</li></ul></div>';
 	return menu;
 }
