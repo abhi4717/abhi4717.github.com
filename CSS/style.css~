@@ -17,6 +17,10 @@ height: auto;
 margin: auto;
 }
 
+a: visited, a: link{
+color: blue !important;
+}
+
 #content{
 width: 70%;
 height: 100%;
@@ -78,6 +82,10 @@ display:block;
 height: 100%;
 }
 
+#menuList li a:visited{
+color: #0000FF;
+}
+
 #menuList li a:hover{
 background-color: #AFC0F2;
 text-decoration:none;
@@ -132,7 +140,7 @@ border: 1px dotted black;
 }
 
 .subMenuA{
-font-size: 14px;
+font-size: 14px !important;
 text-align: left;
 padding: 5px
 }
