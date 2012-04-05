@@ -2,16 +2,15 @@ $("document").ready(function(){
 	/* building menu items */
 	var menu = '';
 	$.ajax({
-		url : "Blogging/topic.json"
+		type: "POST"
+		,url : "Blogging/topic.json"
+		,data:""
 		,dataType : "json"
-		,success : function(data){
-			$("#blogMenu").append(getMenu(data));
-			$("#blogSubMenu").hide();
-			$("#blogSubMenu li").addClass("subMenuLi");
-			$("#blogSubMenu").addClass("subMenu");
-		}
-		,error : function(xhr,error,text){
-			alert(error);
+		,success : appendMenu
+		,error : function(result){
+			if(result.status == 200 && result.statusText == "OK"){
+				appendMenu(result.responseText);	
+			}
 		}
 	});
 	
@@ -25,6 +24,14 @@ $("document").ready(function(){
 	$(".subMenuLi a").live("click",navigatePost);
 });
 
+function appendMenu(data){
+	$("#blogMenu").append(getMenu(data));
+	$("#blogSubMenu").hide();
+	$("#blogSubMenu li").addClass("subMenuLi");
+	$("#blogSubMenu").addClass("subMenu");
+	$(".subMenuLi a").addClass("subMenuA");
+}
+
 function navigatePost(url){
 	var inputElement = $(this).parent().children()[1];
 	var value = $(inputElement).attr('value');
@@ -35,7 +42,8 @@ function navigatePost(url){
 		,dataType : "html"
 		,success : function(data){
 			$("#maincontent").empty();
-			$("#maincontent").append(data);
+			$("#maincontent").append(data).hide();
+			$("#maincontent").fadeIn(500);
 			}	
 		,error : function(xhr, error, text){
 			alert(text);
