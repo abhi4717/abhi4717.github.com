@@ -50,7 +50,7 @@ function navigatePost(url){
 function getMenu(data){
 	var menu = '<ul id="blogSubMenu">';
 	for(var i =0; i<data.length;i++){
-		menu += '<li><a href="#">'+data[i].topic+'</a>';
+		menu += '<li><a href="?blogId='+(i+1)+'">'+data[i].topic+'</a>';
 		menu += '<input type="hidden" value = "'+data[i].filename+'" />';
 	}
 	menu+='</li></ul></div>';
