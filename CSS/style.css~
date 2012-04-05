@@ -61,7 +61,6 @@ list-style-type: none;
 display:block;
 float:left;
 width: 24.85%;
-height: 30px;
 text-align: center;
 border-left: grey 1px dotted;
 border-bottom: grey 1px dotted;
@@ -104,8 +103,6 @@ display: block;
 
 /* classes */
 
-
-
 .indexPageLinks{
 margin: 10px 10px;
 display: block;
@@ -118,13 +115,15 @@ text-align: center;
 }
 
 .subMenu{
-position: relative;
-width: 400%;
+position: absolute;
+width: 70%;
+font-size: 12px;
 }
 
 .subMenuLi{
 clear: both;
 color: white;
+text-align: left;
 background-color: darkBlue;
 }
 

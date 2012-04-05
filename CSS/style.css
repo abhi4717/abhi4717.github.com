@@ -103,8 +103,6 @@ display: block;
 
 /* classes */
 
-
-
 .indexPageLinks{
 margin: 10px 10px;
 display: block;
@@ -117,13 +115,15 @@ text-align: center;
 }
 
 .subMenu{
-position: relative;
-width: 400%;
+position: absolute;
+width: 70%;
+font-size: 12px;
 }
 
 .subMenuLi{
 clear: both;
 color: white;
+text-align: left;
 background-color: darkBlue;
 }
 

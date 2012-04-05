@@ -6,9 +6,9 @@ $("document").ready(function(){
 		,dataType : "json"
 		,success : function(data){
 			$("#blogMenu").append(getMenu(data));
+			$("#blogSubMenu").hide();
 			$("#blogSubMenu li").addClass("subMenuLi");
 			$("#blogSubMenu").addClass("subMenu");
-			/*$("#blogSubMenu").css("height":"50px")*/
 		}
 		,error : function(xhr,error,text){
 			alert(error);
@@ -16,12 +16,25 @@ $("document").ready(function(){
 	});
 	
 	$("#blogMenu").hover(function(){
-			$("#blogSubMenu").show();
+			$("#blogSubMenu").slideDown(200);
 		}
 		,function(){
-			$("#blogSubMenu").hide();
+			$("#blogSubMenu").slideUp(200);
 		});
+	
+	
 });
+
+/*function navigatePost(){
+	$("#maincontent").empty();
+	$.ajax({
+		url : 
+		,dataType : "html"
+		,success : function(data){
+		}
+	})
+}*/
+
 
 function getMenu(data){
 	var menu = '<ul id="blogSubMenu">';
