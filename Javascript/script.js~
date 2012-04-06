@@ -2,15 +2,10 @@ $("document").ready(function(){
 	/* building menu items */
 	var menu = '';
 	$.ajax({
-		type: "POST
-		,url : "Blogging/topic.json"
-		,data:""
+		url : "Blogging/topic.json"
 		,dataType : "json"
 		,success : appendMenu
-		,error : function(result){
-			if(result.status == 200 && result.statusText == "OK"){
-				appendMenu(result.responseText);	
-			}
+		,error : function(xhr,error,result){
 		}
 	});
 	
