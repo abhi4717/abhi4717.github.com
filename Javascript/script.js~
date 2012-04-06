@@ -28,6 +28,13 @@ $("document").ready(function(){
 	else{
 		navigatePost('Blogging/home.html');
 	}
+	DISQUS.reset({
+		reload: true,
+		config: function () {  
+			this.page.identifier = "newidentifier";  
+			this.page.url = "http://techiespond/#!newthread";
+		}
+	});
 
 });
 
