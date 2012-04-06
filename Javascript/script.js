@@ -6,6 +6,7 @@ $("document").ready(function(){
 		,dataType : "json"
 		,success : appendMenu
 		,error : function(xhr,error,result){
+			alert(result);
 		}
 	});
 	
