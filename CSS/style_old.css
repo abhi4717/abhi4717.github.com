@@ -1,0 +1,156 @@
+*{
+margin: 0px;
+padding: 0px;
+font-family:"arial",sans-serif;
+}
+
+body{
+background-image: url('../Images/test.png');
+background-repeat: repeat;
+height: 100%;
+}
+
+header span{
+font-weight: normal;
+font-size: 22pt;
+height: auto;
+margin: auto;
+}
+
+a: visited, a: link{
+color: blue !important;
+}
+
+#content{
+width: 70%;
+height: 100%;
+margin: 20px auto;
+background-color: #FFFFFF;
+border: 1px black solid;
+}
+
+#leftContent{
+width: 70%;
+float: left;
+padding-right: 10px;
+}
+
+#rightContent{
+width: 23%;
+float: right;
+}
+
+#myImage{
+max-width: 220px;
+border: 1px black solid;
+background-image: url('../Images/Me.jpeg');
+width: 100%;
+height: 132px;
+}
+
+#maincontent{
+padding: 30px;
+margin: 10px;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+#skills li{
+display: block;
+text-decoration: underline;
+font-size: 12px;
+}
+
+/* Menu css */
+#menuList{
+list-style-type: none;
+}
+
+#menuList li{
+display:block;
+float:left;
+width: 24.85%;
+text-align: center;
+border-left: grey 1px dotted;
+border-bottom: grey 1px dotted;
+}
+
+#menuList li a{
+text-decoration:none;
+font-size: 20px;
+display:block;
+height: 100%;
+}
+
+#menuList li a:link{
+color: #0000FF;
+}
+
+#menuList li a:visited{
+color: #0000FF;
+}
+
+
+#menuList li a:hover{
+background-color: #AFC0F2;
+text-decoration:none;
+font-size: 20px;
+color: #FFF;
+}
+
+#header{
+background-color: #000066;
+color:white;
+padding: 10px;
+/*height: auto;*/
+font-style: italic;
+/*font-size: 32px;*/
+}
+
+#pageLinks{
+margin: 10px;
+padding: 10px;
+border: 1px solid black;
+}
+
+#pageLinks div button{
+height: 100%;
+width: 100%;
+display: block;
+}
+
+/* classes */
+
+.indexPageLinks{
+margin: 10px 10px;
+display: block;
+float: left;
+width: 47%;
+height: 150px;
+border: 1px solid black;
+border-radius: 5px;
+text-align: center;
+}
+
+.subMenu{
+position: absolute;
+width: 70%;
+font-size: 12px;
+}
+
+.subMenuLi{
+clear: both;
+background-color: white;
+border: 1px dotted black;
+}
+
+.subMenuA{
+font-size: 14px !important;
+text-align: left;
+padding: 5px
+}
+
+.emptyDiv{
+clear: both;
+}
+
