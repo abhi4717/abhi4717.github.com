@@ -2,9 +2,14 @@
 <html>
 <head>
 	<title>Welcome to Techie's Pond</title>
-	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/style.css" />
+	<link rel="stylesheet" href="CSS/menuAccordion.css" />
 	<script src="Javascript/lib/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="Javascript/script.js"></script>
+	<script type="text/javascript" src="Javascript/lib/jquery.easyAccordion.js"></script>
+	<script>
+		
+	</script>
 </head>
 <body>
 	<div id="pageContainer">
@@ -26,14 +31,43 @@
 		</div>
 		<div id="footer">
 			<div id="menu">
-				<div id="footerHome">
+				<div>
+					<a href="#home">
+						<div id="footerHome" class="footerImages">
+							<span>Home</span>
+						</div>
+					</a>
 				</div>
-				<div id="footerKnowMe">
+				<div>
+					<a href="#knowMe">
+						<div id="footerKnowMe" class="footerImages">
+							<span>Know Me</span>
+						</div>
+					</a>
 				</div>
-				<div id="footerArchive">
+				<div>
+					<a href="#">
+						<div id="footerArchive" class="footerImages">
+							<span>Browse Archive</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div id="blogNav">
+				 <div id="accordion">
+					 <dl>
+						<dt>Slide title</dt>
+						<dd><h2>First mammoth here</h2><p><img src="images/mammoths/img1.png" alt="Alt text to go here" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor.</p></dd>
+						<dt>Another slide</dt>
+						<dd><h2>Over the moon!</h2><p><img src="images/mammoths/img2.png" alt="Alt text to go here" />Aenean commodo ligula eget dolor. Aenean massa. Nascetur aenean commodo ligula eget dolor. Aenean massa eget. </p></dd>
+						<dt>Third slide</dt>
+						<dd><h2>Another mammoth</h2><p><img src="images/mammoths/img3.png" alt="Alt text to go here" />Ipsum dolor sit amet.Aenean ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.</p></dd>
+						<dt>Second Last slide</dt>
+						<dd><h2>This is my second last favourite</h2><p><img src="images/mammoths/img4.png" alt="Alt text to go here" />Cum sociis natoque penatibus et donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p></dd>
+						<dt>Last slide</dt>
+						<dd><h2>This is my favourite</h2><p><img src="images/mammoths/img4.png" alt="Alt text to go here" />Cum sociis natoque penatibus et donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p></dd>
+					</dl>
+				<div>
 			</div>
 			<div class="clearFloat"></div>
 		</div>

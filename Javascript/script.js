@@ -1,13 +1,16 @@
 $("document").ready(function(){
 	/* building menu items */
 	var menu = '';
-	$.ajax({
+	/*$.ajax({
 		url : "Blogging/topic.json"
 		,dataType : "json"
 		,success : appendMenu
 		,error : function(xhr,error,result){
-			/*alert(result);*/
+			alert(result);
 		}
+	});*/
+	$("#accordion").easyAccordion({ 
+			autoStart: false	
 	});
 	
 	$("#blogMenu").hover(function(){
