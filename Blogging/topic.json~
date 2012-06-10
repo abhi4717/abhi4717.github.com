@@ -1,6 +1,0 @@
-[
-	{"id": "1",		"d": "12",	"m": "03",	"y": "2012", "topic": "Javascript and Regular Expressions", "filename":"blog4.html", "summary":"he main function of regular expressions is search for a pattern within stream of strings. A regular expression gives the user the ability to search an expression with minimum efforts. There would be many times when we had to..."}
-,{"id": "1",	"d": "29",	"m": "02",	"y": "2012", "topic": "Meta Tags","filename":"blog3.html", "summary":"Meta tags are used to provide additional information to the browsers. This information will be available to the browser and not displayed on the rendered page. The information contained within the Meta tags may range from a brief description about the..."}
-,{"id": "1",	"d": "23",	"m": "02",	"y": "2012", "topic": "Integrating GIT with Visual Studio","filename":"blog2.html", "summary":"In the steps below I am going to integrate git plug in into Visual Studio 2010 Enterprise Edition..."}
-,{"id": "1",	"d": "21",	"m": "02",	"y": "2012", "topic": "Linux Pipe operation","filename":"blog1.html", "summary":"One of the interesting operations involves the use of Pipes. Pipes provide a dynamic way to concatenate operations. It redirects output from one operation to another operation..."}
-]
