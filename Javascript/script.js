@@ -10,7 +10,8 @@ $("document").ready(function(){
 		}
 	});*/
 	$("#accordion").easyAccordion({ 
-			autoStart: false	
+			autoStart: false,
+			slideNum: false	
 	});
 	
 	$("#blogMenu").hover(function(){
