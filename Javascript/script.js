@@ -1,4 +1,7 @@
 $("document").ready(function(){
+	
+	$('#tabs').tabs();
+	
 	/* building menu items */
 	var menu = '';
 	/*$.ajax({
@@ -9,6 +12,8 @@ $("document").ready(function(){
 			alert(result);
 		}
 	});*/
+	
+	/* accordion settings */
 	$("#accordion").easyAccordion({ 
 			autoStart: false,
 			slideNum: false	
@@ -39,6 +44,7 @@ $("document").ready(function(){
 			this.page.url = "http://techiespond/#!newthread";
 		}
 	});
+	
 
 });
 
