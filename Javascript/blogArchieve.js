@@ -38,17 +38,13 @@
 			},
 		]
 	}
-];
-
-$(function(){
-	initializeArchieve($('#archieve2'),blogDetails[0]);
-});*/
+];*/
 
 function initializeArchieve(divDetails, objblogDetail){
 	var txtHTML = generateStructure(objblogDetail);
 	divDetails.addClass('archieveClass');
 	divDetails.append(txtHTML);
-	$('.month', divDetails).height(divDetails.height());
+	$('.month', divDetails).height(divDetails.height()-20);
 	
 	// Handling click events of the blog links
 	$('.month span ul li a', divDetails).click(function (){

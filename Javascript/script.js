@@ -1,9 +1,7 @@
 $("document").ready(function(){
-	
-	$('#tabs').tabs();
-	
-	/* building menu items */
-	var menu = '';
+	// From the previous template
+	/* building menu items
+	var menu = '';*/
 	/*$.ajax({
 		url : "Blogging/topic.json"
 		,dataType : "json"
@@ -13,13 +11,9 @@ $("document").ready(function(){
 		}
 	});*/
 	
-	/* accordion settings */
-	$("#accordion").easyAccordion({ 
-			autoStart: false,
-			slideNum: false	
-	});
 	
-	$("#blogMenu").hover(function(){
+	
+	/*$("#blogMenu").hover(function(){
 			$("#blogSubMenu").slideDown(200);
 		}
 		,function(){
@@ -44,7 +38,16 @@ $("document").ready(function(){
 			this.page.url = "http://techiespond/#!newthread";
 		}
 	});
+	*/
 	
+	// accordion settings
+	$("#accordion").easyAccordion({ 
+			autoStart: false,
+			slideNum: false	
+	});
+	
+	// blog archieve section
+	initializeArchieve($("#arhieve2012"),blogDetails[0]);
 
 });
 
