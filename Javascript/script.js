@@ -46,18 +46,13 @@ $("document").ready(function(){
 			slideNum: false	
 	});
 	
+	// Retreive the blogs for latest year
+	
+	
 	// blog archieve section
 	initializeArchieve($("#arhieve2012"),blogDetails[0]);
 
 });
-
-function appendMenu(data){
-	$("#blogMenu").append(getMenu(data));
-	$("#blogSubMenu").hide();
-	$("#blogSubMenu li").addClass("subMenuLi");
-	$("#blogSubMenu").addClass("subMenu");
-	$(".subMenuLi a").addClass("subMenuA");
-}
 
 function navigatePost(postURL){
 	/*var inputElement = $(this).parent().children()[1];
@@ -72,17 +67,7 @@ function navigatePost(postURL){
 			$("#maincontent").fadeIn(500);
 			}	
 		,error : function(xhr, error, text){
-			/*alert(text);*/
+			Console.log(alert(text));
 		}
 	})
-}
-
-function getMenu(data){
-	var menu = '<ul id="blogSubMenu">';
-	for(var i =0; i<data.length;i++){
-		menu += '<li><a href="?blogId='+data[i].filename.split('.')[0]+'">'+data[i].topic+'</a>';
-		menu += '<input type="hidden" value = "'+data[i].filename+'" />';
-	}
-	menu+='</li></ul></div>';
-	return menu;
 }
