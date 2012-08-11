@@ -69,21 +69,7 @@ function createBlogMappingStructure(){
 		blogs.blogId = '';
 		blogs.title = '';
 		var blogs = {};
-		if(blogDetails == 'null' || blogDetails.length == 0){
-			/*// creating year entries
-		yearDetails.year = blogMapping[0].year;
-		// creating month entries
-		monthDetail.month = blogMapping[0].month;
-		// creating blog entries
-		blogs.blogId = blogMapping[0].id;
-		blogs.title = blogMapping[0].topic;
-		// putting the blog into month details
-		monthDetail.blogs.push(blogs);
-		// putting the month details into year details
-		yearDetails.months.push(monthDetail)
-		blogDetails.push(yearDetails);*/
-		}
-		else{
+		if(blogDetails !== 'null' && blogDetails.length > 0){
 			var tmpYearDetails = blogDetails[blogDetails.length-1];
 			if(tmpYearDetails.year == blogMapping[count].year){
 				yearDetails = blogDetails.pop();
@@ -96,7 +82,6 @@ function createBlogMappingStructure(){
 				yearDetails.year = blogMapping[count].year;
 				blogDetails.push(yearDetails);
 			}
-			
 		}
 		// creating year entries
 		yearDetails.year = blogMapping[count].year;
