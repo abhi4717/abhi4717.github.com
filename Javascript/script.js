@@ -40,23 +40,48 @@ $("document").ready(function(){
 		}
 	});
 	*/
-	
-	// accordion settings
-	$("#accordion").easyAccordion({ 
-			autoStart: false,
-			slideNum: false	
-	});
 	// Arrange blog index in ascending order
 	arrangeBlogIndex();
 	
 	// Create blog Mapping Structure
 	createBlogMappingStructure();
 	
-	// blog archieve section
-	initializeArchieve($("#arhieve2012"),blogDetails[0]);
-
+	// Generate divs for years in accordion menu
+	generateDivs();
+	
+	// accordion settings
+	$("#accordion").easyAccordion({ 
+			autoStart: false,
+			slideNum: false	
+	});
+	
+	// Fill the menus
+	fillMenus();
+	//initializeArchieve($("#archive2013"),blogDetails[0]);
 });
 
+// Functions will fill the menus of the accordion menus
+function fillMenus(){
+	for(var count = 0; count < blogDetails.length; count++){
+		var strDivId = '#archive'+blogDetails[count].year;
+		initializeArchieve($(strDivId),blogDetails[count]);
+	}
+}
+
+// Append dt(s) and dd(s) for the respective years in accordion menu section
+function generateDivs(){
+	var strArchieveTags = '';
+	for(var count=0; count < blogDetails.length; count++){
+		strArchieveTags += '<dt>';
+		strArchieveTags += blogDetails[count].year;
+		strArchieveTags += '</dt><dd><div id="';
+		strArchieveTags += 'archive'+blogDetails[count].year;
+		strArchieveTags += '"></div></dd>';
+	}
+	$('#accordion dl').append(strArchieveTags);
+}
+
+// This function generates the blogDetails structure out of blogMapping
 function createBlogMappingStructure(){
 	for(var count = blogMapping.length-1; count >= 0; count--){
 		var yearDetails = {};
@@ -77,10 +102,6 @@ function createBlogMappingStructure(){
 				if(tmpMonthDetails.month == blogMapping[count].month){
 					monthDetail = yearDetails.months.pop();
 				}
-			}
-			else{
-				yearDetails.year = blogMapping[count].year;
-				blogDetails.push(yearDetails);
 			}
 		}
 		// creating year entries
