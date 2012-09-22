@@ -1,5 +1,7 @@
 var blogDetails = new Array();
+var currentYearDisplay = 0;
 $("document").ready(function(){
+	currentYearDisplay = 0;
 	// From the previous template
 	/* building menu items
 	var menu = '';*/
@@ -40,38 +42,84 @@ $("document").ready(function(){
 		}
 	});
 	*/
+	$('.btnPrevious').hide();
+	if(blogDetails.length > 5){
+		$('.btnNext').show();
+	}
+	else{
+		$('.btnNext').hide();
+	}
+		
+	// Next button click event
+	$('.btnNext').click(function(){
+		$('#accordion dl').children().remove();
+		currentYearDisplay = currentYearDisplay + 5;
+		displayYears(currentYearDisplay);
+		$('.btnPrevious').show();
+		if(currentYearDisplay + 5 > blogDetails.length){
+			$('.btnNext').hide();
+		}
+		else{
+			$('.btnNext').show();
+		}
+	});
+	
+	// Previous button click event
+	$('.btnPrevious').click(function(){
+		$('#accordion dl').children().remove();
+		currentYearDisplay = currentYearDisplay - 5;
+		displayYears(currentYearDisplay);
+		$('.btnNext').show();
+		if(currentYearDisplay - 5 < 0){
+			$('.btnPrevious').hide();
+		}
+		else{
+			$('.btnPrevious').show();
+		}
+	});
+	
 	// Arrange blog index in ascending order
 	arrangeBlogIndex();
 	
 	// Create blog Mapping Structure
 	createBlogMappingStructure();
 	
-	// Generate divs for years in accordion menu
-	generateDivs();
+	// Display menu for 5 year records only
+	displayYears(currentYearDisplay);
 	
-	// accordion settings
-	$("#accordion").easyAccordion({ 
-			autoStart: false,
-			slideNum: false	
-	});
-	
-	// Fill the menus
-	fillMenus();
-	//initializeArchieve($("#archive2013"),blogDetails[0]);
 });
 
 // Functions will fill the menus of the accordion menus
-function fillMenus(){
-	for(var count = 0; count < blogDetails.length; count++){
+function fillMenus(strIndex){
+	for(var count = strIndex; (count < (strIndex + 5)) && (count < blogDetails.length) ; count++){
 		var strDivId = '#archive'+blogDetails[count].year;
 		initializeArchieve($(strDivId),blogDetails[count]);
 	}
 }
 
+// Display menu for 5 year records only
+function displayYears(startIndex){
+	
+	
+	// Generate divs for years in accordion menu
+	generateDivs(startIndex);
+	
+	// accordion settings
+	$("#accordion").easyAccordion({ 
+		autoStart: false,
+		slideNum: false	
+	});
+	
+	// Fill the menus
+	fillMenus(startIndex);
+	
+	
+}
+
 // Append dt(s) and dd(s) for the respective years in accordion menu section
-function generateDivs(){
+function generateDivs(startIndex){
 	var strArchieveTags = '';
-	for(var count=0; count < blogDetails.length; count++){
+	for(var count=startIndex; (count < (startIndex + 5)) && (count < blogDetails.length) ; count++){
 		strArchieveTags += '<dt>';
 		strArchieveTags += blogDetails[count].year;
 		strArchieveTags += '</dt><dd><div id="';

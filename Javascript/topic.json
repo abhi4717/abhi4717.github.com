@@ -1,4 +1,3 @@
-// Blogs must be in ascending order of the date written
 var blogMapping = [
 {"id": 1, "blogSortId" : 20120221,	"date": 21,	"month": 2,	"year": 2012, "topic": "Linux Pipe operation","filename":"blog1.html", 					"summary":"One of the interesting operations involves the use of Pipes. Pipes provide a dynamic way to concatenate operations. It redirects output from one operation to another operation..."}
 ,{"id": 2, "blogSortId" : 20120223,	"date": 23,	"month": 2,	"year": 2012, "topic": "Integrating GIT with Visual Studio","filename":"blog2.html", 	"summary":"In the steps below I am going to integrate git plug in into Visual Studio 2010 Enterprise Edition..."}
