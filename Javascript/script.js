@@ -106,10 +106,10 @@ function displayYears(startIndex){
 	
 	$("#accordion").width($('#blogNav').width()-10);
 	if(!$('.btnPrevious').is(':hidden')){
-		$("#accordion").width($("#accordion").width() - $('.btnPrevious').width());
+		$("#accordion").width($("#accordion").width() - $('.btnPrevious').width()- 5);
 	}
 	if(!$('.btnNext').is(':hidden')){
-		$("#accordion").width($("#accordion").width() - $('.btnNext').width());
+		$("#accordion").width($("#accordion").width() - $('.btnNext').width()- 5);
 	}
 	// Generate divs for years in accordion menu
 	generateDivs(startIndex);
