@@ -42,6 +42,12 @@ $("document").ready(function(){
 		}
 	});
 	*/
+	// Arrange blog index in ascending order
+	arrangeBlogIndex();
+	
+	// Create blog Mapping Structure
+	createBlogMappingStructure();
+	
 	$('.btnPrevious').hide();
 	if(blogDetails.length > 5){
 		$('.btnNext').show();
@@ -54,7 +60,7 @@ $("document").ready(function(){
 	$('.btnNext').click(function(){
 		$('#accordion dl').children().remove();
 		currentYearDisplay = currentYearDisplay + 5;
-		displayYears(currentYearDisplay);
+		
 		$('.btnPrevious').show();
 		if(currentYearDisplay + 5 > blogDetails.length){
 			$('.btnNext').hide();
@@ -62,13 +68,15 @@ $("document").ready(function(){
 		else{
 			$('.btnNext').show();
 		}
+		
+		displayYears(currentYearDisplay);
 	});
 	
 	// Previous button click event
 	$('.btnPrevious').click(function(){
 		$('#accordion dl').children().remove();
 		currentYearDisplay = currentYearDisplay - 5;
-		displayYears(currentYearDisplay);
+		
 		$('.btnNext').show();
 		if(currentYearDisplay - 5 < 0){
 			$('.btnPrevious').hide();
@@ -76,13 +84,9 @@ $("document").ready(function(){
 		else{
 			$('.btnPrevious').show();
 		}
+		
+		displayYears(currentYearDisplay);
 	});
-	
-	// Arrange blog index in ascending order
-	arrangeBlogIndex();
-	
-	// Create blog Mapping Structure
-	createBlogMappingStructure();
 	
 	// Display menu for 5 year records only
 	displayYears(currentYearDisplay);
@@ -100,7 +104,13 @@ function fillMenus(strIndex){
 // Display menu for 5 year records only
 function displayYears(startIndex){
 	
-	
+	$("#accordion").width($('#blogNav').width()-10);
+	if(!$('.btnPrevious').is(':hidden')){
+		$("#accordion").width($("#accordion").width() - $('.btnPrevious').width());
+	}
+	if(!$('.btnNext').is(':hidden')){
+		$("#accordion").width($("#accordion").width() - $('.btnNext').width());
+	}
 	// Generate divs for years in accordion menu
 	generateDivs(startIndex);
 	

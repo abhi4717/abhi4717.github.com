@@ -127,6 +127,10 @@ height: 100%;
 float: right;
 }
 
+#blogNav div{
+display: inline-block;
+}
+
 .footerImages{
 height: 40px;
 width: 100%;
@@ -164,7 +168,9 @@ height: 100%;
 background-image: url('../Images/Previous-icon.png');
 background-repeat: no-repeat;
 background-position: center;
-float:left;
+position: relative;
+top: -66.67%;
+/*float:left;*/
 }
 
 .btnPrevious:hover{
@@ -184,12 +190,12 @@ cursor: pointer;
 .btnNext{
 width: 50px;
 height: 100%;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
 background-image: url('../Images/Next-icon.png');
 background-repeat: no-repeat;
 background-position: center;
-float:right;
+position: relative;
+top: -66.67%;
+/*float:right;*/
 }
 
 .clearFloat{
