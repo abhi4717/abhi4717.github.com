@@ -3,10 +3,9 @@ function initializeArchieve(divDetails, objblogDetail){
 	divDetails.addClass('archieveClass');
 	divDetails.append(txtHTML);
 	$('.month', divDetails).height(divDetails.height()-20);
-	
 	// Handling click events of the blog links
 	$('.month span ul li a', divDetails).click(function (){
-		alert($(":hidden",$(this).parent()).val());
+		getBlog($(":hidden",$(this).parent()).val());
 	});
 }
 
@@ -32,6 +31,13 @@ function addMonths(objMonth, intYear){
 		txtMonthDiv += '</div>';
 	}
 	return txtMonthDiv;
+}
+
+function getFullDate(intDate, intMonth, intYear){
+	if(intDate != null || intDate != undefined  || intMonth != null || intMonth != undefined || intYear != null || intYear != undefined)
+	var strFullDate = '';
+	strFullDate = intDate + ' ' + getMonthName(intMonth,intYear);
+	return strFullDate;
 }
 
 // Function to return the name of the month based on the month number
@@ -112,7 +118,7 @@ function getBlogLinks(objBlogs){
 			}
 			txtBlogs += '<input type="hidden" value="';
 			txtBlogs += objBlogs[blogCount].blogId;
-			txtBlogs += '"/><a href="#">';
+			txtBlogs += '"/><a data="#">';
 			txtBlogs += objBlogs[blogCount].title;
 			txtBlogs += '</a></li>';
 			if((blogCount+1)%3 == 0){

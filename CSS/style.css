@@ -37,9 +37,12 @@ background-image: -webkit-linear-gradient(top, #326300 0%, #004769 100%);
 background-image: linear-gradient(top, #326300 0%, #004769 100%);
 }
 
+a{
+cursor: pointer;
+}
 
 #pageContainer{
-width: 70%;
+width: 80%;
 margin: 2% auto 5% auto;
 }
 
@@ -75,8 +78,25 @@ padding: 10px 10px 10px 0px;
 
 #article{
 height: auto;
-width: 70%;
+width: 100%;
 float: left;
+}
+
+#articleHeader{
+border-bottom: 2px solid darkgreen;
+font-family: cursive;
+font-size: 20px;
+font-weight: bold;
+color:darkgreen;
+}
+
+#articleName{
+float: left;
+width: 70%;
+}
+
+#articleDate{
+float: right;
 }
 
 #about{
@@ -196,6 +216,20 @@ background-position: center;
 position: relative;
 top: -66.67%;
 /*float:right;*/
+}
+
+.blogTitle{
+float: left;
+width: 75%;
+}
+
+.blogArchieveHeader{
+font-weight: bold;
+}
+
+.blogDate{
+float: right;
+width: 15%;
 }
 
 .clearFloat{

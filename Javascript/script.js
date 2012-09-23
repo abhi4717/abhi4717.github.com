@@ -1,47 +1,10 @@
 var blogDetails = new Array();
 var currentYearDisplay = 0;
 $("document").ready(function(){
+	var blogValues = {};
+	var intBlogId = '';
 	currentYearDisplay = 0;
-	// From the previous template
-	/* building menu items
-	var menu = '';*/
-	/*$.ajax({
-		url : "Blogging/topic.json"
-		,dataType : "json"
-		,success : appendMenu
-		,error : function(xhr,error,result){
-			alert(result);
-		}
-	});*/
 	
-	
-	
-	/*$("#blogMenu").hover(function(){
-			$("#blogSubMenu").slideDown(200);
-		}
-		,function(){
-			$("#blogSubMenu").slideUp(200);
-		});
-		
-	var url = location.href;
-	var queryString = url.split("?");
-	if(queryString[1] != undefined){
-		var blogValue = queryString[1].split("=");
-		var blogId = blogValue[1];
-		var navURL = 'Blogging/'+blogId+'.html';
-		navigatePost(navURL);
-	}
-	else{
-		navigatePost('Blogging/home.html');
-	}
-	DISQUS.reset({
-		reload: true,
-		config: function () {  
-			this.page.identifier = "newidentifier";  
-			this.page.url = "http://techiespond/#!newthread";
-		}
-	});
-	*/
 	// Arrange blog index in ascending order
 	arrangeBlogIndex();
 	
@@ -55,7 +18,50 @@ $("document").ready(function(){
 	else{
 		$('.btnNext').hide();
 	}
-		
+	
+	// Define click events for home button
+	$('a[data="home"]').click(function (){
+		getBlog(blogDetails[0].months[0].blogs[0].blogId);
+	});
+	
+	// Define click events for know me button
+	$('a[data="knowMe"]').click(function (){
+		showBlog('aboutme.html');
+		// Display the title and date of the published blog
+		$('#articleName').html('Abhishek Gopalan');
+		$('#articleDate').html('');
+	});
+	
+	// Define click event for archieve button
+	$('a[data="archieve"]').click(function(){
+		var data = '<div id="archieveBlock"><div class="blogArchieveHeader"><div class="blogTitle">Title</div><div class="blogDate">Published in</div></div>';
+		for(var yearCount = 0; yearCount < blogDetails.length; yearCount++){
+			var year = blogDetails[yearCount];
+			for(var monthCount = 0; monthCount < year.months.length; monthCount++){
+				var month = year.months[monthCount];
+				for(var blogCount = 0; blogCount < month.blogs.length; blogCount++){
+					var blog = month.blogs[blogCount];
+					data += '<div>';
+					data += '<input type="hidden" value="'+blog.blogId+'"/>';
+					data += '<div class="blogTitle"><a>'+blog.title+'</a></div>';
+					data += '<div class="blogDate"><a>'+getMonthName(month.month, year.year)+'</a></div>';
+					data += '</div>';
+				}
+			}
+		}
+		data += '<div class="clearFloat"></div></div>'
+		$('#maincontent').fadeOut(500);
+		$('#maincontent').empty();
+		$('#maincontent').append(data).hide();
+		$('#maincontent').fadeIn(500);
+		$('#articleName').html('Blog archieve');
+		$('#articleDate').html('');
+		$('#archieveBlock a').click(function(){
+			//alert($(':hidden',$(this).parent().parent()).val());
+			getBlog($(":hidden",$(this).parent().parent()).val());
+		});
+	});
+	
 	// Next button click event
 	$('.btnNext').click(function(){
 		$('#accordion dl').children().remove();
@@ -91,7 +97,31 @@ $("document").ready(function(){
 	// Display menu for 5 year records only
 	displayYears(currentYearDisplay);
 	
+	intBlogId = blogDetails[0].months[0].blogs[0].blogId;
+	
+	getBlog(intBlogId);
 });
+
+function getBlog(intBlogId){
+	// Get the latest blog Name
+	blogValues = getBlogFile(intBlogId);
+	
+	// Display the latest blog on the screen
+	showBlog(blogValues.filename);
+	
+	// Display the title and date of the published blog
+	$('#articleName').html(blogValues.title);
+	$('#articleDate').html(getFullDate(blogValues.date, blogValues.month, blogValues.year));
+	
+	// Reset the disqus thread
+	DISQUS.reset({
+		reload: true,
+		config: function () {
+			this.page.identifier = "newidentifier";
+			this.page.url = "http://techiespond/#!newthread";
+		}
+	});
+}
 
 // Functions will fill the menus of the accordion menus
 function fillMenus(strIndex){
@@ -206,4 +236,37 @@ function navigatePost(postURL){
 			Console.log(alert(text));
 		}
 	})
+}
+
+function getBlogFile(blogId){
+	var blogDetailsForMainContent = {};
+	for(var count = 0; count < blogMapping.length; count++){
+		if(blogMapping[count].id == blogId){
+			blogDetailsForMainContent.filename = blogMapping[count].filename;
+			blogDetailsForMainContent.title = blogMapping[count].topic;
+			blogDetailsForMainContent.date = blogMapping[count].date;
+			blogDetailsForMainContent.month = blogMapping[count].month;
+			blogDetailsForMainContent.year = blogMapping[count].year;
+			return blogDetailsForMainContent;
+		}
+	}
+}
+
+function showBlog(blogName){
+	if(blogName != '' || blogName != 'null' || blogName != 'undefined'){
+		var strBlogPath = 'Blogging\\' + blogName;
+		$.ajax({
+			url : strBlogPath
+			,dataType : 'html'
+			,success : function(data){
+					$('#maincontent').empty();
+					$('#maincontent').append(data).hide();
+					$('#maincontent').fadeIn(500);
+				}
+			,error : function(xhr, error, text){
+				Console.log(error);
+				Console.log(text);
+			}
+		});
+	}
 }
