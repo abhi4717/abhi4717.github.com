@@ -254,7 +254,7 @@ function getBlogFile(blogId){
 
 function showBlog(blogName){
 	if(blogName != '' || blogName != 'null' || blogName != 'undefined'){
-		var strBlogPath = 'Blogging/' + blogName;
+		var strBlogPath = 'Blogging\\' + blogName;
 		$.ajax({
 			url : strBlogPath
 			,dataType : 'html'
