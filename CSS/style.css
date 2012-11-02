@@ -183,6 +183,7 @@ text-shadow: 2px 2px 5px grey;
 }
 
 .btnPrevious{
+display:none;
 width: 50px;
 height: 100%;
 background-image: url('../Images/Previous-icon.png');
@@ -208,6 +209,7 @@ cursor: pointer;
 }
 
 .btnNext{
+display:none;
 width: 50px;
 height: 100%;
 background-image: url('../Images/Next-icon.png');
