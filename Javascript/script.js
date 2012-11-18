@@ -43,7 +43,7 @@ $("document").ready(function(){
 					var blog = month.blogs[blogCount];
 					data += '<div>';
 					data += '<input type="hidden" value="'+blog.blogId+'"/>';
-					data += '<div class="blogTitle"><a>'+blog.title+'</a></div>';
+					data += '<div class="blogTitle"><a href="#!blog'+blog.blogId+'">'+blog.title+'</a></div>';
 					data += '<div class="blogDate"><a>'+getMonthName(month.month, year.year)+'</a></div>';
 					data += '</div>';
 				}

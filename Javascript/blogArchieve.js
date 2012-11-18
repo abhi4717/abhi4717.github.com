@@ -118,7 +118,7 @@ function getBlogLinks(objBlogs){
 			}
 			txtBlogs += '<input type="hidden" value="';
 			txtBlogs += objBlogs[blogCount].blogId;
-			txtBlogs += '"/><a data="#">';
+			txtBlogs += '"/><a data="#" href="#!blog'+objBlogs[blogCount].blogId+'">';
 			txtBlogs += objBlogs[blogCount].title;
 			txtBlogs += '</a></li>';
 			if((blogCount+1)%3 == 0){
